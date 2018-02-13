@@ -1,5 +1,8 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
+using System.Collections.Generic;
 using Leet;
+using Leet.Models;
 
 namespace Leet.Tests
 {
@@ -9,21 +12,8 @@ namespace Leet.Tests
     [TestMethod]
     public void ChangeE_Returns3_String()
     {
-      char[] testMessage = "hello".ToCharArray();
-      char[] leetMessage;
-      foreach (char in testMessage)
-      {
-        if (char == "e" || char =="E")
-        {
-          leetMessage.push("3");
-        }
-        else
-        {
-          leetMessage.push(char);
-        }
-      }
-      string result = string.Join("", leetMessage);
-      return result;
+      Message newMessage = new Message();
+      Assert.AreEqual(true, "h3llo" == newMessage.IntoLeet("hello"));
     }
   }
 }
